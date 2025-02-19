@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84dd7d5d-125d-456a-82d9-724900098440" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c288c41c20e4a3cab40b283c2a3081b1f2b7705" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c288c41c20e4a3cab40b283c2a3081b1f2b7705" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8bff15ebdb8e7c010f39f8e72fbc9b011f50d5c5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8bff15ebdb8e7c010f39f8e72fbc9b011f50d5c5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell" beforeDir="false" afterPath="$PROJECT_DIR$/shell" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shell/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shell/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +15,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/shell" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="KubernetesApiProvider"><![CDATA[{
   "isMigrated": true
@@ -72,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738933792224</updated>
-      <workItem from="1738933793320" duration="57546000" />
+      <workItem from="1738933793320" duration="57870000" />
     </task>
     <servers />
   </component>
