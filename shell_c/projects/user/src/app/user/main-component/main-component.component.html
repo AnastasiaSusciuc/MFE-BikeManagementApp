@@ -1,0 +1,58 @@
+<!--<p>main-component works!</p>-->
+<div class="profile-section">
+  <h2>Your Profile</h2>
+  <p><strong>Id:</strong> {{ userProfile.id }}</p>
+  <p><strong>Username:</strong> {{ userProfile.username }}</p>
+  <p><strong>Role:</strong> {{ userRole }}</p>
+</div>
+
+<div class="actions-section">
+  <div *ngIf="userRole === 'admin'" class="button-container">
+    <button (click)="toggleAddBikeForm()">Add Bike</button>
+<!--    <button (click)="fetchUsers()">See Renters</button>-->
+  </div>
+
+  <div *ngIf="userRole === 'renter'" class="button-container">
+    <button (click)="fetchUserBorrowings(userProfile.id)">View Rented Bikes</button>
+  </div>
+</div>
+
+<app-add-bike
+  *ngIf="showAddBikeForm"
+  (bikeAdded)="onBikeAdded()"
+></app-add-bike>
+
+<div *ngIf="showUsers" class="users-list">
+  <h3>Users</h3>
+  <ul>
+    <li *ngFor="let user of users">
+<!--      <strong>Name:</strong> {{ user.name }} |-->
+      <strong>Username:</strong> {{ user.username }} |
+      <button *ngIf="user.role === 'renter'" (click)="fetchUserBorrowings(user.id)">See Bikes Borrowed By User</button>
+    </li>
+  </ul>
+  <button (click)="this.showUsers = false;">Close</button>
+</div>
+
+<div *ngIf="showBorrowings">
+  <ul *ngIf="borrowings.length > 0; else noBorrowingsMessage">
+    <li *ngFor="let bike of borrowings">
+      <div class="bike-item">
+        <h3>{{ bike.title }}</h3>
+        <p><strong>Brand:</strong> {{ bike.brand }}</p>
+        <p><strong>Model:</strong> {{ bike.model }}</p>
+        <p><strong>Serial Number:</strong> {{ bike.serial_number }}</p>
+        <p><strong>Return By:</strong> {{ bike.return_by }}</p>
+        <p><strong>Returned on:</strong> {{ bike.returned_on }}</p>
+        <button *ngIf="userRole === 'renter' && !bike.returned_on" (click)="returnBike(bike)">
+          Return Bike
+        </button>
+      </div>
+    </li>
+  </ul>
+  <button (click)="this.showBorrowings = false">Close</button>
+</div>
+
+<ng-template #noBorrowingsMessage>
+  <p>No rentals to display.</p>
+</ng-template>

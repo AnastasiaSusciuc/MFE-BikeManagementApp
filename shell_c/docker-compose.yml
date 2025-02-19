@@ -1,0 +1,42 @@
+version: '3.8'
+
+networks:
+  app_network:
+    driver: bridge
+
+services:
+  host:
+    build:
+      context: ./projects/shell
+    networks:
+      - app_network
+    ports:
+      - "4200:4200"
+    depends_on:
+      - auth
+      - bike
+      - user
+
+  auth:
+    build:
+      context: ./projects/auth
+    networks:
+      - app_network
+    ports:
+      - "4201:4201"
+
+  bike:
+    build:
+      context: ./projects/bike
+    networks:
+      - app_network
+    ports:
+      - "4202:4202"
+
+  user:
+    build:
+      context: ./projects/user
+    networks:
+      - app_network
+    ports:
+      - "4203:4203"

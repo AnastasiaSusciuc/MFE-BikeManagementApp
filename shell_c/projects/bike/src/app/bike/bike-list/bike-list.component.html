@@ -1,0 +1,24 @@
+<div *ngIf="errorMessage" class="error-message">
+  <p>{{ errorMessage }}</p>
+</div>
+
+<div *ngIf="!errorMessage && bikes.length > 0" class="bike-list">
+  <h2>Bike List</h2>
+  <ul>
+    <li *ngFor="let bike of bikes">
+      <div class="bike-item">
+        <h3>{{ bike.title }}</h3>
+        <p><strong>Bike Model:</strong> {{ bike.model }}</p>
+        <p><strong>Bike Brand:</strong> {{ bike.brand }}</p>
+        <p><strong>Available Units:</strong> {{ bike.available_units }}</p>
+        <button *ngIf="userRole === 'renter'" (click)="borrowBike(bike)">
+          {{ bike.available_units > 0 ? 'Borrow bike' : 'Join Waiting List' }}
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="!errorMessage && bikes.length === 0" class="no-bikes">
+  <p>No bikes available.</p>
+</div>

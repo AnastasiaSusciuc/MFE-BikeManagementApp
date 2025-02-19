@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Error Message */
+.error-message {
+  background-color: #ffdddd;
+  color: #d8000c;
+  padding: 12px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 5px;
+  max-width: 400px;
+  font-weight: bold;
+}
+
+/* Bike List Container */
+.bike-list {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.bike-list h2 {
+  text-align: center;
+  color: #007bff;
+}
+
+/* Bike Items */
+.bike-item {
+  background: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bike-item h3 {
+  margin: 0;
+  color: #333;
+}
+
+.bike-item p {
+  margin: 5px 0;
+}
+
+/* Buttons */
+button {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Waiting List Button (Disabled) */
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* No Bikes Message */
+.no-bikes {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}

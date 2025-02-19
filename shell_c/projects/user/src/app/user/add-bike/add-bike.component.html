@@ -1,0 +1,30 @@
+<!--<p>add-bike works!</p>-->
+<div class="add-bike-form">
+  <h3>Add a New Bike</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="brand">Brand:</label>
+      <input id="brand" [(ngModel)]="newBike.brand" name="brand" required />
+    </div>
+    <div>
+      <label for="model">Model:</label>
+      <input id="model" [(ngModel)]="newBike.model" name="model" required />
+    </div>
+    <div>
+      <label for="serial_number">Serial number:</label>
+      <input id="serial_number" [(ngModel)]="newBike.serial_number" name="serial_number" required />
+    </div>
+    <div>
+      <label for="availableUnits">Available Units:</label>
+      <input
+        id="availableUnits"
+        type="number"
+        [(ngModel)]="newBike.available_units"
+        name="availableUnits"
+        min="1"
+        required
+      />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
